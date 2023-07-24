@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Poppins&family=Righteous&display=swap");
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -20,5 +21,48 @@ body {
   width: 70%;
   border-radius: 20px;
   color: aliceblue;
-  padding: 10px;
+  padding: 30px;
+}
+.container__star > img {
+  background-color: hsl(213, 23%, 27%);
+  border-radius: 50px;
+  padding: 15px;
+}
+.container__title > h3 {
+  font-family: "Overpass", sans-serif;
+  letter-spacing: 1px;
+}
+.container__description > p {
+  font-family: "Overpass", sans-serif;
+  letter-spacing: 1px;
+  color: hsl(217, 12%, 63%);
+  font-size: 15px;
+}
+.container__rating {
+  display: flex;
+  justify-content: space-around;
+}
+.container__rating > p {
+  background-color: hsl(213, 23%, 27%);
+  border-radius: 50px;
+  padding: 15px;
+  color: hsl(217, 12%, 63%);
+  font-size: 15px;
+}
+
+.container__submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container__submit > button {
+  border-radius: 20px;
+  background-color: hsl(25, 97%, 53%);
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  width: 100%;
+  padding: 5px 0;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  font-size: 15px;
 }
