@@ -16,6 +16,9 @@ body {
 }
 .container {
   background: linear-gradient(to bottom, hsl(213, 19%, 18%), hsl(216, 12%, 8%));
-  height: 75%;
-  width: 80%;
+  height: 40%;
+  width: 70%;
+  border-radius: 20px;
+  color: aliceblue;
+  padding: 10px;
 }
