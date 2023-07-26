@@ -1,13 +1,20 @@
 const submitButton = document.getElementById("container__submit__button");
 const ratingContainer = document.getElementById("container");
-const sayThankYou = () => {
-  const thnakyouContainer = document.createElement("div");
-  thnakyouContainer.innerHTML = `<div class="thankyou_container" id="thankyou_container">
+const ratings = document.querySelectorAll(".ratings");
+let ratingSelected;
+ratings.forEach((rating) => {
+  rating.addEventListener("click", () => {
+    ratingSelected = rating.textContent;
+  });
+});
+const sayThankYou = (ratingSelect) => {
+  const thankyouContainer = document.createElement("div");
+  thankyouContainer.innerHTML = `<div class="thankyou_container" id="thankyou_container">
   <div class="thankyou_container_image">
     <img src="./images/illustration-thank-you.svg" />
   </div>
   <div class="thankyou_container_rating">
-    <p>You selected 4 out of 5</p>
+    <p>You selected ${ratingSelect} out of 5</p>
   </div>
   <div class="thankyou_container_greet">
     <h3>Thank you!</h3>
@@ -19,6 +26,8 @@ const sayThankYou = () => {
     </p>
   </div>
 </div>`;
-  document.body.replaceChild(thnakyouContainer, ratingContainer);
+  document.body.replaceChild(thankyouContainer, ratingContainer);
 };
-submitButton.addEventListener("click", sayThankYou);
+submitButton.addEventListener("click", () => {
+  sayThankYou(ratingSelected);
+});
